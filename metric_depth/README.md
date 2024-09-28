@@ -1,5 +1,10 @@
 # Depth Anything V2 for Metric Depth Estimation
 
+python depth_to_pointcloud.py --encoder vitl --load-from checkpoints/depth_anything_v2_metric_vkitti_vitl.pth  --max-depth 20   --img-path input/drone.png --outdir input/
+
+python depth_to_pointcloud.py --encoder vitl --load-from checkpoints/depth_anything_v2_metric_hypersim_vitl.pth  --max-depth 20   --img-path input/test.jpg --outdir input/
+
+
 ![teaser](./assets/compare_zoedepth.png)
 
 We here provide a simple codebase to fine-tune our Depth Anything V2 pre-trained encoder for metric depth estimation. Built on our powerful encoder, we use a simple DPT head to regress the depth. We fine-tune our pre-trained encoder on synthetic Hypersim / Virtual KITTI datasets for indoor / outdoor metric depth estimation, respectively.
